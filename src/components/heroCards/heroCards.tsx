@@ -1,0 +1,62 @@
+import React from 'react'
+
+interface dogsAtribute {
+  atributes: {
+    bred_for: string,
+    breed_group: string,
+    height:{
+      imperial: string,
+      metric: string,
+    },
+    id: number,
+    image: {
+      height: number,
+      id: string,
+      url: string,
+      width: number,
+    },
+    life_span: string,
+    name: string,
+    origin: string,
+    reference_image_id: string,
+    temperament: string,
+    weight: {
+      imperial: string,
+      metric: string,
+    }
+}
+}
+
+
+const HeroCards: React.FC <dogsAtribute> = props => {
+
+  
+  return (
+    <div className='card'>
+      <img alt='' src={props.atributes.image.url}/>
+      <div></div>
+      <div className='infoAtributes'>
+        <div>
+          <h3>Bred for:</h3>
+          <h4>{props.atributes.bred_for}</h4>
+        </div>
+        <div>
+          <h3>Breed group:</h3>
+          <h4>{props.atributes.breed_group}</h4>
+        </div>
+        <div>
+          <h3>Life span:</h3>
+          <h4>{props.atributes.life_span}</h4>
+        </div>
+      
+        <div>
+          <h3>Temperament:</h3>
+          <h4>{props.atributes.temperament}</h4>
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+export default HeroCards
