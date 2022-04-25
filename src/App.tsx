@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   const URL = `https://api.thedogapi.com/v1/breeds`
   const [state, setState] = useState([])
+  const [filter, setFilter] = useState('')
 
   useEffect(() => {
     const getData = async () => {
@@ -23,8 +24,8 @@ function App() {
   }, [URL]);
   return (
     <div className="App">
-      <Header dogs={state}/>
-      <Loading dogs={state} />
+      <Header dogs={state} filter= {filter} />
+      <Loading dogs={state} filter= {filter}/>
       <Footer />
     </div>
   );

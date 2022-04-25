@@ -26,18 +26,30 @@ interface dogsProps  {
       metric: string,
     }
 }[];
+filter:string,
+
 }
 
 const Header: React.FC <dogsProps> = props => {
-  const breedsArray = props.dogs.map(dogs => dogs.breed_group)
-  console.log(breedsArray);
+  const resultUniqueBreeds: string[] = [];
+  let breedsArray = props.dogs.map(dogs => dogs.breed_group)
+  
+
+  for (let index = 0; index < breedsArray.length; index++) {
+    if (breedsArray[index]!== undefined && breedsArray[index]!== '') {
+      resultUniqueBreeds.push(breedsArray[index])
+    }
+  }
+  const uniqueBreedsArray = resultUniqueBreeds.filter((breed: string,idx: number)=>{
+    return resultUniqueBreeds.indexOf(breed)===idx
+  })
   
   return (
     <header>
       <div className='logo-header'>
-        <h1> Guau! </h1>
+        <h1> Wouf! </h1>
       </div>
-      <Breeds id={breedsArray} />
+      <Breeds id={uniqueBreedsArray} />
     </header>
   )
 }
