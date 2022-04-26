@@ -5,10 +5,11 @@ interface PaginationProps {
   cardsPerPage:number,
   totalCards:number,
   paginate:any,
-  active:number
+  active:number,
+  filter:string
 }
 
-function PaginationComponent({cardsPerPage, totalCards, paginate, active}:PaginationProps) {
+function PaginationComponent({cardsPerPage, totalCards, paginate, active, filter}:PaginationProps) {
   let items = [];
   let secondItems = [];
 
@@ -16,22 +17,31 @@ function PaginationComponent({cardsPerPage, totalCards, paginate, active}:Pagina
     window.scrollTo(0,0)
   })
 
-  for(let i = 1; i <= Math.ceil(totalCards/cardsPerPage)/2; i++){
-    items.push(
-      <Pagination.Item key={i} active={i===active} onClick= {()=> paginate(i)}>
-      {i}
-    </Pagination.Item>
-    )
+  if(filter==='all'){
+    for(let i = 1; i <= Math.ceil(totalCards/cardsPerPage)/2; i++){
+      items.push(
+        <Pagination.Item key={i} active={i===active} onClick= {()=> paginate(i)}>
+        {i}
+      </Pagination.Item>
+      )
+    }
+    for(let i = 10; i <= Math.ceil(totalCards/cardsPerPage); i++){
+      secondItems.push(
+        <Pagination.Item key={i} active={i===active} onClick= {()=> paginate(i)}>
+        {i}
+      </Pagination.Item>
+      )
+    }
   }
-
-  for(let i = 10; i <= Math.ceil(totalCards/cardsPerPage); i++){
-    secondItems.push(
-      <Pagination.Item key={i} active={i===active} onClick= {()=> paginate(i)}>
-      {i}
-    </Pagination.Item>
-    )
+  else{
+    for(let i = 1; i <= Math.ceil(totalCards/cardsPerPage); i++){
+      items.push(
+        <Pagination.Item key={i} active={i===active} onClick= {()=> paginate(i)}>
+        {i}
+      </Pagination.Item>
+      )
+    }
   }
-
 
   return (
     <div className='container-pagination'>

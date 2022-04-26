@@ -2,11 +2,11 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='footer-container'>
+    <footer className='footer-container'>
       <p>
-      Made it for Maria Alejandra Ibanez Pachon
+      Made it by Maria Alejandra Ibanez Pachon
       </p>
-    </div>
+    </footer>
   )
 }
 

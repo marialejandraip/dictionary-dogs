@@ -26,6 +26,8 @@ header {
   background-color: var(--red);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-header{
@@ -57,15 +59,10 @@ header {
   background-color: var(--salmon);
   border-radius: 8px;
   border: 1px solid var(--beige);
-  margin: 5px 2px;
+  margin: 5px 12px;
   cursor: pointer;
   padding: 0 16px;
 }
-
-/* button.active {
-  background-color: var(--red);
-  color: var(--pink);
-} */
 
 .form-select {
   font-size: 1rem;
@@ -73,7 +70,7 @@ header {
 }
 
 .cardContainer{
-  margin-top:228px;
+  margin-top:280px;
 }
 
 .container-loading{
@@ -109,7 +106,7 @@ h2{
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 h4 {
@@ -120,6 +117,7 @@ h4 {
 
 p{
   font-size: 0.55rem;
+  color: var(--letterLigth);
 }
 
 img{
@@ -151,11 +149,13 @@ img{
   align-items: center;
   justify-content: center;
   padding-top: 1rem;
+  position: relative;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 600px) {
   .cardContainer{
-    margin-top: 120px;
+    margin-top: 140px;
     display: flex;
     flex-wrap: wrap;
   }

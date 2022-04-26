@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroCards from '../heroCards/heroCards'
+import HeroCards from '../HeroCards/heroCards'
 
 interface dogsProps  {
   dogs: {
@@ -29,20 +29,19 @@ interface dogsProps  {
 loading:boolean,
 }
 
-const Loading: React.FC <dogsProps> =props => {
-  
+const Loading=(props:dogsProps) => {
 
   return (
-    <div>
+    <>
       { props.loading ? 
-      <div className='container-loading'> 
+      <section className='container-loading'> 
         <h2>Loading...</h2>
-      </div> :
-      <div className='cardContainer'>
+      </section> :
+      <section className='cardContainer'>
         {props.dogs.map(dogs => <HeroCards key={dogs.id} atributes={dogs} />)}
-      </div>
-}
-    </div>
+      </section>
+      }
+    </>
   )
 }
 

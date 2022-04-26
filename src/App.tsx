@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import Header from './components/header/header';
+import Header from './components/Header/header';
 import Loading from './components/Loading/loading';
 import Footer from './components/Footer/Footer';
-import PaginationComponent from './components/pagination/Pagination';
+import PaginationComponent from './components/Pagination/Pagination';
 
 interface dogsProps  {
   dogs: {
@@ -60,11 +60,6 @@ function App() {
     getData()
   }, [URL]);
 
-  //console.log(state[0].breed_group);
-  
-  
-  //Get Filtered Cards
-
 
   //Get Current cards 
   const indexOfLastCard = currentPage * cardsPerPage
@@ -79,9 +74,23 @@ function App() {
 
   return (
     <div className="App">
-      <Header dogs={state} setFilter= {setFilter} filter={filter} setDogs={setDogs}/>
-      <Loading dogs={currentCards} loading={loading} />
-      <PaginationComponent cardsPerPage={cardsPerPage} totalCards={state.length} paginate={paginate} active={active}/>
+      <Header 
+        dogs={state} 
+        setFilter= {setFilter} 
+        filter={filter} 
+        setDogs={setDogs}
+      />
+      <Loading 
+        dogs={currentCards} 
+        loading={loading} 
+      />
+      <PaginationComponent 
+        cardsPerPage={cardsPerPage} 
+        totalCards={dogs.length} 
+        paginate={paginate} 
+        active={active}
+        filter={filter}
+      />
       <Footer />
     </div>
   );
