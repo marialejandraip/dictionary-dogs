@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/dictionary-dogs/static/css/main.f401a58d.css",
-    "main.js": "/dictionary-dogs/static/js/main.e7173f15.js",
+    "main.css": "/dictionary-dogs/static/css/main.b3992742.css",
+    "main.js": "/dictionary-dogs/static/js/main.de9c3751.js",
     "static/media/dog-24.png": "/dictionary-dogs/static/media/dog-24.f9bd87ce5efbe17d8ef6.png",
     "index.html": "/dictionary-dogs/index.html",
-    "main.f401a58d.css.map": "/dictionary-dogs/static/css/main.f401a58d.css.map",
-    "main.e7173f15.js.map": "/dictionary-dogs/static/js/main.e7173f15.js.map"
+    "main.b3992742.css.map": "/dictionary-dogs/static/css/main.b3992742.css.map",
+    "main.de9c3751.js.map": "/dictionary-dogs/static/js/main.de9c3751.js.map"
   },
   "entrypoints": [
-    "static/css/main.f401a58d.css",
-    "static/js/main.e7173f15.js"
+    "static/css/main.b3992742.css",
+    "static/js/main.de9c3751.js"
   ]
 }
