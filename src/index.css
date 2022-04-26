@@ -54,6 +54,14 @@ select {
   padding: auto;
 }
 
+.container-loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--letterLigth);
+}
+
 .card {
   display: flex;
   justify-content: space-around;
@@ -85,7 +93,45 @@ img{
   height: 20%;
 }
 
-.pagination-customized{
+.container-pagination{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-link{
   color: var(--red);
 }
 
+.page-item.active .page-link {
+  color: var(--letter);
+  background-color: var(--salmon);
+  border-color: var(--salmon);
+}
+
+.footer-container{
+  background-color: var(--white);
+  color: var(--red);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .cardContainer{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  img {
+    height: 40% ;
+  }
+
+  .container-pagination{
+    justify-content: center;
+    flex-direction: row;
+  }
+}
