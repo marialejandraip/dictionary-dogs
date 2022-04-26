@@ -29,20 +29,24 @@ interface dogsAtribute {
 
 
 const HeroCards: React.FC <dogsAtribute> = props => {
-
-  
   return (
-    <div className='card'>
+    <div className='card'key={props.atributes.id}>
+            <div>
       <img alt='' src={props.atributes.image.url}/>
-      <div></div>
+
       <div className='infoAtributes'>
         <div>
-          <h3>Bred for:</h3>
+          <h3>Bred for:</h3>         
+          {props.atributes.bred_for === undefined ||  props.atributes.breed_group === ''?
+          <h4>{'Ups! Not have info about'}</h4>:
           <h4>{props.atributes.bred_for}</h4>
+          }
         </div>
         <div>
-          <h3>Breed group:</h3>
-          <h4>{props.atributes.breed_group}</h4>
+        <h3>Breed group:</h3>
+          {props.atributes.breed_group === undefined ||  props.atributes.breed_group === ''?
+          <h4>{'Ups! Not have info about'}</h4>:<h4>{props.atributes.breed_group}</h4>
+          }
         </div>
         <div>
           <h3>Life span:</h3>
@@ -54,7 +58,7 @@ const HeroCards: React.FC <dogsAtribute> = props => {
           <h4>{props.atributes.temperament}</h4>
         </div>
       </div>
-
+      </div>
     </div>
   )
 }

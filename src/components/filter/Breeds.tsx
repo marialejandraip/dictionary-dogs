@@ -7,7 +7,7 @@ const Breeds = ({id,...restProps}:breedsOptions) => {
     <div className='selectFilter'>
       <h3>Breed Filter:</h3>
       <select>
-        {id.map(breed => (<option>{breed}</option>))}
+        {id.map(breed => (<option key={breed}>{breed}</option>))}
       </select>
     </div>
   )

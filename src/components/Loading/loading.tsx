@@ -1,6 +1,5 @@
 import React from 'react'
 import HeroCards from '../heroCards/heroCards'
-import PaginationComponent from '../pagination/Pagination'
 
 interface dogsProps  {
   dogs: {
@@ -27,18 +26,21 @@ interface dogsProps  {
       metric: string,
     }
 }[];
-filter: string,
+loading:boolean
 }
 
 const Loading: React.FC <dogsProps> =props => {
-  
+
   return (
     <div>
+      { props.loading ? 
+      <div className='container-loading'> 
+        <h2>Loading...</h2>
+      </div> :
       <div className='cardContainer'>
-        {props.dogs.map(dogs => <HeroCards atributes={dogs} />)}
-        <PaginationComponent />
+        {props.dogs.map(dogs => <HeroCards key={dogs.id} atributes={dogs} />)}
       </div>
-      
+}
     </div>
   )
 }
