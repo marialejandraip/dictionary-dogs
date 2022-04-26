@@ -1,5 +1,6 @@
 import React from 'react'
 import Breeds from '../filter/Breeds'
+import imageDog from '../../assets/dog-24.png'
 
 interface dogsProps  {
   dogs: {
@@ -25,9 +26,10 @@ interface dogsProps  {
       imperial: string,
       metric: string,
     }
-}[];
-filter:string,
-
+}[],
+setFilter:any,
+setDogs: any,
+filter:string
 }
 
 const Header: React.FC <dogsProps> = props => {
@@ -47,9 +49,10 @@ const Header: React.FC <dogsProps> = props => {
   return (
     <header>
       <div className='logo-header'>
+        <img alt= '' src={imageDog}></img>
         <h1> Wouf! </h1>
       </div>
-      <Breeds id={uniqueBreedsArray} />
+      <Breeds id={uniqueBreedsArray} setFilter={props.setFilter} all={props.dogs} filter={props.filter} setDogs={props.setDogs} />
     </header>
   )
 }
