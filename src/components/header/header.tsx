@@ -32,7 +32,7 @@ setDogs: any,
 filter:string
 }
 
-const Header: React.FC <dogsProps> = props => {
+const Header = (props:dogsProps) => {
   const resultUniqueBreeds: string[] = [];
   let breedsArray = props.dogs.map(dogs => dogs.breed_group)
   
@@ -52,6 +52,7 @@ const Header: React.FC <dogsProps> = props => {
         <img alt= '' src={imageDog}></img>
         <h1> Wouf! </h1>
       </div>
+      <h3>An app for knowing more about dogs, Please filter by Breed group</h3>
       <Breeds id={uniqueBreedsArray} setFilter={props.setFilter} all={props.dogs} filter={props.filter} setDogs={props.setDogs} />
     </header>
   )

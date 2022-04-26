@@ -60,11 +60,6 @@ function App() {
     getData()
   }, [URL]);
 
-  //console.log(state[0].breed_group);
-  
-  
-  //Get Filtered Cards
-
 
   //Get Current cards 
   const indexOfLastCard = currentPage * cardsPerPage
@@ -81,7 +76,7 @@ function App() {
     <div className="App">
       <Header dogs={state} setFilter= {setFilter} filter={filter} setDogs={setDogs}/>
       <Loading dogs={currentCards} loading={loading} />
-      <PaginationComponent cardsPerPage={cardsPerPage} totalCards={state.length} paginate={paginate} active={active}/>
+      <PaginationComponent cardsPerPage={cardsPerPage} totalCards={dogs.length} paginate={paginate} active={active}/>
       <Footer />
     </div>
   );
