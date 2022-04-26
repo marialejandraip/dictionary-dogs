@@ -59,7 +59,7 @@ header {
   background-color: var(--salmon);
   border-radius: 8px;
   border: 1px solid var(--beige);
-  margin: 5px 2px;
+  margin: 5px 12px;
   cursor: pointer;
   padding: 0 16px;
 }

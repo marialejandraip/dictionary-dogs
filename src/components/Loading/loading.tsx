@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroCards from '../heroCards/heroCards'
+import HeroCards from '../HeroCards/heroCards'
 
 interface dogsProps  {
   dogs: {

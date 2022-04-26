@@ -35,14 +35,12 @@ type breedsOptions ={
 const Breeds = ({id,setFilter, setDogs, all,filter}:breedsOptions) => {
 
   useEffect (() => {
-    if(filter !== 'all'){
-      const arrayFilterDogs = all.filter((dog) => dog.breed_group === filter)
-      console.log(arrayFilterDogs);
-      setDogs(arrayFilterDogs)
-    }else {
+    if(filter === 'all'){
       setDogs(all)
+    }else {
+      const arrayFilterDogs = all.filter((dog) => dog.breed_group === filter)
+      setDogs(arrayFilterDogs)
     }
-    
   }, [setFilter, all, filter, setDogs])
 
   return (

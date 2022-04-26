@@ -27,12 +27,11 @@ interface dogsAtribute {
   }
 }
 
-
 const HeroCards = (props: dogsAtribute) => {
   return (
     <div className='card'key={props.atributes.id}>
       <div>
-        <img alt='' src={props.atributes.image.url}/>
+        <img alt='DogImage' src={props.atributes.image.url}/>
         <div className='infoAtributes'>
           <div>
             <h2>{props.atributes.name}</h2>
