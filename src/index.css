@@ -23,35 +23,57 @@ header {
   z-index: 100;
   padding: 0 32px;
   box-shadow: rgb(219 219 219 / 25%) 0px 4px 4px;
-  background-color: var(--white);
+  background-color: var(--red);
   display: flex;
   flex-direction: column;
 }
 
 .logo-header{
-  height: 50%;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
-select {
-  border: none;
-  width: 50%;
-  margin: 0 0 0 32px;
-  height: 40px;
-  border-radius: 8px;
-  
+.logo-header img{
+  height: 50px;
+  width: 50px;
+  color: var(--white);
 }
 
-.selectFilter{
+.select-filter{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 20px 8px 0;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-filter button {
+  color: var(--letter);
+  background-color: var(--salmon);
+  border-radius: 8px;
+  border: 1px solid var(--beige);
+  margin: 5px 2px;
+  cursor: pointer;
+  padding: 0 16px;
+}
+
+/* button.active {
+  background-color: var(--red);
+  color: var(--pink);
+} */
+
+.form-select {
+  font-size: 1rem;
+  color: var(--letterLigth);
 }
 
 .cardContainer{
-  margin-top: 100px;
-  padding: auto;
+  margin-top:228px;
 }
 
 .container-loading{
@@ -77,15 +99,27 @@ select {
   box-shadow: rgb(219 219 219 / 25%) 0px 4px 4px;
 }
 
-h3 {
+h1{
+  color: var(--white);
+}
+
+h2{
   font-size: 1rem;
   color: var(--red);
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 h4 {
   font-size: 0.75rem;
   font-weight: none;
   color: var(--letterLigth);
+}
+
+p{
+  font-size: 0.55rem;
 }
 
 img{
@@ -121,7 +155,7 @@ img{
 
 @media only screen and (min-width: 600px) {
   .cardContainer{
-    margin-top: 100px;
+    margin-top: 120px;
     display: flex;
     flex-wrap: wrap;
   }

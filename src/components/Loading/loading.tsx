@@ -26,10 +26,11 @@ interface dogsProps  {
       metric: string,
     }
 }[];
-loading:boolean
+loading:boolean,
 }
 
 const Loading: React.FC <dogsProps> =props => {
+  
 
   return (
     <div>
